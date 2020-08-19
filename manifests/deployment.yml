@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "sreesit1ose-b2b3"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "sreesit1ose-b2b3"
+    spec:
+      containers:
+        - name: "sreesit1ose-b2b3"
+          image: "sreesitcontainerreg.azurecr.io/sreesit1ose"
+          ports:
+          - containerPort: 80

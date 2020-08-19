@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "sreesit1ose-b2b3"
+    labels:
+        app: "sreesit1ose-b2b3"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "sreesit1ose-b2b3"
